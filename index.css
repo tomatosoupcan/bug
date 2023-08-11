@@ -1,0 +1,120 @@
+.main {
+  width: 410px;
+  min-width: 410px;
+  -webkit-user-select: none;  
+  -moz-user-select: none;    
+  -ms-user-select: none;      
+  user-select: none;
+  --s: 100px;  /* size  */
+  --m: 0px;    /* margin */
+  --f: calc(1.732 * var(--s) + 4 * var(--m)  - 1px);
+  --x: 0.90; /* border */
+  transform-origin: 0 0;
+}
+
+.bg {
+  overflow: hidden;
+  font-size: 10em;
+  margin: 0;
+}
+
+.row {
+  display: flex;
+}
+html,
+body {
+  overscroll-behavior-y: contain;
+  height: 100%; overflow: hidden
+}
+
+.outCircle {
+  margin-left: 3px;
+  margin-top: 3px;
+  height: 124px;
+  width: 124px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  outline: 1rem solid;
+  clip-path: circle(65px at 50% 50%);
+}
+
+.innerIcon {
+  font-size: 13em;
+  margin-top: -25px;
+  color: white;
+}
+
+.centerIcon {
+  font-size: 11em;
+  color: white;
+  margin-top: -17px;
+}
+
+.number {
+  position: absolute;
+  font-size: 3em;
+}
+
+.one, .middle {
+  margin-left: 142px;
+}
+.two {
+  margin-left: 154px;
+}
+.two, .five {
+  margin-top: -20px;
+}
+.middle {
+  margin-top: -88px;
+}
+.four, .three {
+  margin-top: -5px;
+}
+.four {
+  margin-left: 57px;
+}
+.three{
+  margin-left: 45px;
+}
+
+.boardbuttons {
+  margin-top: -380px;
+  margin-left: 25px;
+}
+
+.ageTrack {
+  float: right;
+  margin-top: -60px;
+  margin-right: 40px;
+}
+
+.playerTracking {
+  margin-top: 325px;
+}
+
+table {
+  width: 410px;
+}
+
+@font-face {
+    font-family: 'Times New Roman';
+    src: url(LiberationSerif-Regular.ttf) format('truetype');
+}
+@font-face {
+    font-family: 'Times New Roman';
+    src: url(LiberationSerif-Italic.ttf) format('truetype');
+    font-style: italic;
+}
+@font-face {
+    font-family: 'Times New Roman';
+    src: url(LiberationSerif-Bold.ttf) format('truetype');
+    font-weight: bold;
+}
+@font-face {
+    font-family: 'Times New Roman';
+    src: url(LiberationSerif-BoldItalic.ttf) format('truetype');
+    font-style: italic;
+    font-weight: bold;
+}

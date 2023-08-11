@@ -1,0 +1,87 @@
+<head>
+<style>
+body {
+  font-family: "Times New Roman";
+}
+</style>
+<link rel='stylesheet' href='index.css'>
+<script src='index.js'></script>
+</head>
+
+
+<body onload="onload();">
+
+<meta name="viewport" 
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+<meta charset="UTF-8">
+
+<div class='main' id='main'>
+  <div class='row'>
+    <div class='outCircle one' style='background-color: purple;' id='c1' onclick='mancala(1);'><div class='innerIcon'>★</div><div class='number' id='t1'>0</input></div></div>
+  </div>
+  <div class='row'>
+    <div class='outCircle five' style='background-color: green;' id='c5' onclick='mancala(5);'><div class='innerIcon' style='margin-top: -5px;'>♣</div><div class='number' id='t5'>0</input></div></div>
+    <div class='outCircle two' style='background-color: red;' id='c2' onclick='mancala(2);'><div class='innerIcon' style='margin-top: -5px;'>♥</div><div class='number' id='t2'>0</input></div></div>
+  </div>
+  <div class='row'>
+    <div class='outCircle middle' style='background-color: brown;' id='c6'><div class='centerIcon'>■</div><div class='number' style='margin-top:0px;' id='t6'>0</input></div></div>
+  </div>
+  <div class='row'>
+    <div class='outCircle four' style='background-color: orange;' id='c4' onclick='mancala(4);'><div class='innerIcon' style='margin-top: -5px;'>♦</div><div class='number' id='t4'>0</input></div></div>
+    <div class='outCircle three' style='background-color: blue;' id='c3' onclick='mancala(3);'><div class='innerIcon' style='margin-top: -5px;'>♠</div><div class='number' id='t3'>0</input></div></div>
+  </div>
+  <br>
+<div class='boardbuttons'>
+  <button onclick='reset();'>Reset Board</button><br>
+  <button onclick='setup();'>Next &nbsp;Round</button><br>
+</div>
+<div class='ageTrack'>
+  <input type="radio" name="age" id='r1' checked>Age 1</input><br>
+  <input type="radio" name="age" id='r2'>Age 2</input><br>
+  <input type="radio" name="age" id='r3'>Age 3</input>
+</div>
+<div class='playerTracking'>
+  <table>
+    <tr>
+      <td>Player 1:</td>
+      <td><input type="radio" name="p1" id='pr11' checked>Allegiance</input></td>
+      <td><input type="radio" name="p1" id='pr12'>No Allegiance</input>&nbsp;&nbsp;</td>
+      <td><input type="number" value="0" style='width: 45px;' id='pn1'></input><br></td>
+    </tr>
+    <tr>
+      <td>Player 2:</td>
+      <td><input type="radio" name="p2" id='pr21' checked>Allegiance</input></td>
+      <td><input type="radio" name="p2" id='pr22'>No Allegiance</input>&nbsp;&nbsp;</td>
+      <td><input type="number" value="0" style='width: 45px;' id='pn2'></input><br></td>
+    </tr>
+    <tr>
+      <td>Player 3:</td>
+      <td><input type="radio" name="p3" id='pr31' checked>Allegiance</input></td>
+      <td><input type="radio" name="p3" id='pr32'>No Allegiance</input>&nbsp;&nbsp;</td>
+      <td><input type="number" value="0" style='width: 45px;' id='pn3'></input><br></td>
+    </tr>
+    <tr>
+      <td>Player 4:</td>
+      <td><input type="radio" name="p4" id='pr41' checked>Allegiance</input></td>
+      <td><input type="radio" name="p4" id='pr42'>No Allegiance</input>&nbsp;&nbsp;</td>
+      <td><input type="number" value="0" style='width: 45px;' id='pn4'></input><br></td>
+    </tr>
+    <tr>
+      <td>Player 5:</td>
+      <td><input type="radio" name="p5" id='pr51' checked>Allegiance</input></td>
+      <td><input type="radio" name="p5" id='pr52'>No Allegiance</input>&nbsp;&nbsp;</td>
+      <td><input type="number" value="0" style='width: 45px;' id='pn5'></input><br></td>
+    </tr>
+  </table><br>
+  <table>
+    <tr>
+      <td>★ <input type="number" value="0" style='width: 37px;' id='n1' onchange='adjust(1)'></td>
+      <td>♥ <input type="number" value="0" style='width: 37px;' id='n2' onchange='adjust(2)'></td>
+      <td>♠ <input type="number" value="0" style='width: 37px;' id='n3' onchange='adjust(3)'></td>
+      <td>♦ <input type="number" value="0" style='width: 37px;' id='n4' onchange='adjust(4)'></td>
+      <td>♣ <input type="number" value="0" style='width: 37px;' id='n5' onchange='adjust(5)'></td>
+      <td>■ <input type="number" value="0" style='width: 37px;' id='n6' onchange='adjust(6)'></td>
+    </tr>
+  </table>
+</div>
+</div>
